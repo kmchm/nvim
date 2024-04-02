@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "snyk_ls", "typos_lsp"}
+        ensure_installed = { "snyk_ls", "typos_lsp"}
       })
     end
   },
@@ -20,15 +20,10 @@ return {
 
       local lspconfig = require("lspconfig")
 
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.tsserver.setup({
-        capabilities = capabilities
-      })
       lspconfig.snyk_ls.setup({
         capabilities = capabilities
       })
+
       lspconfig.typos_lsp.setup({})
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
