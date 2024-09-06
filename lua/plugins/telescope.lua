@@ -13,7 +13,12 @@ return {
     config = function()
       require("telescope").setup {
         defaults = {
-          initial_mode = "normal"
+          initial_mode = "normal",
+          layout_config = {
+            width = { padding=0 },
+            height = { padding=0 },
+            preview_cutoff = 120,
+          },
         },
         extensions = {
           ["ui-select"] = {
