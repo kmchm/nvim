@@ -17,7 +17,9 @@ return {
           layout_config = {
             width = { padding=0 },
             height = { padding=0 },
-            preview_cutoff = 120,
+            preview_cutoff = 60,
+            -- 0.55 = 55% of the width
+            preview_width = 0.55,
           },
         },
         extensions = {
