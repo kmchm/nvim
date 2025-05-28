@@ -26,7 +26,6 @@ return {
                 "tsx",
                 "typescript",
                 "xml",
---                "pkl"
             },
             sync_install = false,
             highlight = {
